@@ -1,4 +1,3 @@
-
 define(function(require, exports, module) {
 
 	require("engine.io");
@@ -25,7 +24,7 @@ define(function(require, exports, module) {
 		if (this.options.port === 443) {
 			this.options.secure = true;
 		}
-		this.options.port = this.options.port || document.location.port;
+		this.options.port = document.location.port || 80;
 		this.options.path = this.options.prefix;
 		delete this.options.prefix;
 		this.id = false;
